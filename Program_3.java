@@ -25,6 +25,6 @@ public class Program_3 {
                 System.out.print(", ");
             }
         }
+        System.out.println();
     }
 }
-S

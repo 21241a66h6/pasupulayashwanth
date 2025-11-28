@@ -1,9 +1,24 @@
 //this code is return in java language
 import java.util.Scanner;
 
-class Calculator {
+public class Program_1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
-    // Method to perform operation
+        System.out.print("Enter value of a: ");
+        double a = sc.nextDouble();
+
+        System.out.print("Enter value of b: ");
+        double b = sc.nextDouble();
+
+        System.out.print("Enter operation (add/sub/mul/div or + - * /): ");
+        String op = sc.next();
+
+        Program_1 calc = new Program_1();
+        double result = calc.calculate(a, b, op);
+
+        System.out.println("Result: " + result);
+    }
     public double calculate(double a, double b, String op) {
         switch (op) {
             case "add":
@@ -30,24 +45,5 @@ class Calculator {
                 System.out.println("Invalid operation type!");
                 return Double.NaN;
         }
-    }
-}
-class Program_1 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-
-        System.out.print("Enter value of a: ");
-        double a = sc.nextDouble();
-
-        System.out.print("Enter value of b: ");
-        double b = sc.nextDouble();
-
-        System.out.print("Enter operation (add/sub/mul/div or + - * /): ");
-        String op = sc.next();
-
-        Calculator calc = new Calculator();
-        double result = calc.calculate(a, b, op);
-
-        System.out.println("Result: " + result);
     }
 }
